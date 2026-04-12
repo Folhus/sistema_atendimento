@@ -1,57 +1,98 @@
-# Maven
+# ============================================================
+# Compilacao e Build
+# ============================================================
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.DS_Store
-*.iml
-*.iws
-*.ipr
-out/
-
-# Java
 *.class
 *.jar
 *.war
 *.ear
-*.zip
-*.tar.gz
-*.rar
+*.nar
 
-# Gradle (caso use no futuro)
-.gradle
-build/
+# ============================================================
+# Maven
+# ============================================================
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
-# Logs
-logs/
-*.log
-*.txt
-
-# Database
+# ============================================================
+# Banco de Dados
+# ============================================================
+# Arquivos legados do MapDB (versao anterior)
 *.db
-*.sqlite
+*.db.p
+*.db.t
 
-# OS
-.DS_Store
+# Logs gerados pela Impressora
+logs/
+
+# ============================================================
+# Arquivos de comunicacao legados (versao anterior)
+# ============================================================
+entrada.json
+saida.json
+
+# ============================================================
+# IDEs
+# ============================================================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# ============================================================
+# Sistema Operacional
+# ============================================================
+
+# Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Node (caso use no futuro)
-node_modules/
-npm-debug.log
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
 
-# Environment files
+# Linux
+*~
+
+# ============================================================
+# Configuracoes sensiveis
+# NAO versionar credenciais de banco ou chaves de API
+# ============================================================
+application-prod.properties
+application-local.properties
 .env
-.env.local
+*.key
+*.pem
+secrets.properties
+
+# ============================================================
+# Logs gerais da JVM e do Spring
+# ============================================================
+*.log
+spring.log
